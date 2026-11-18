@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>dev seed</title>
+  </head>
+  <body>
+    <script>
+      // 仅用于本地截图/调试：写入一个假 token 后跳到目标页
+      localStorage.setItem('agri_token', 'dev.seed.' + Date.now())
+      var to = new URLSearchParams(location.search).get('to') || '/dashboard'
+      location.replace(to)
+    </script>
+  </body>
+</html>
